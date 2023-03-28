@@ -28,9 +28,7 @@ public class GameControllerTest {
 
     @Test
     void playGame_shouldReturnWinAmountIfPlayerWins() {
-        Bet bet = new Bet();
-        bet.setBet(10.0);
-        bet.setNumber(50);
+        Bet bet = new Bet(10.0, 50);
         Double winAmount = 20.0;
         when(gameService.playGame(any(Bet.class))).thenReturn(winAmount);
 

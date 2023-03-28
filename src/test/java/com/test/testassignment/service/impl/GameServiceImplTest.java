@@ -23,9 +23,7 @@ class GameServiceImplTest {
     void playGame_shouldReturnWinAmount_whenPlayerWins() {
         MockitoAnnotations.openMocks(this);
 
-        Bet bet = new Bet();
-        bet.setBet(40.5);
-        bet.setNumber(99);
+        Bet bet = new Bet(40.5, 99);
 
         when(random.nextInt(100)).thenReturn(49);
 
@@ -38,9 +36,7 @@ class GameServiceImplTest {
     void playGame_shouldReturnZero_whenPlayerLoses() {
         MockitoAnnotations.openMocks(this);
 
-        Bet bet = new Bet();
-        bet.setBet(10.0);
-        bet.setNumber(1);
+        Bet bet = new Bet(10.0, 1);
 
         when(random.nextInt(100)).thenReturn(51);
 

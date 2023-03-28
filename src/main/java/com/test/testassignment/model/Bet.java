@@ -17,6 +17,14 @@ public class Bet {
     @Max(value = 100, message = "Number should be between 1 and 100")
     private Integer number;
 
+    public Bet(Double bet, Integer number) {
+        this.bet = bet;
+        this.number = number;
+    }
+
+    public Bet() {
+    }
+
     public Double getBet() {
         return bet;
     }
